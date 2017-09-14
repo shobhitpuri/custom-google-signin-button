@@ -12,8 +12,18 @@ Light Theme (White)        |  Dark Theme (Blue)
 :-------------------------:|:-------------------------:
 ![Google Sign-In Light](images/GoogleSignInLight.png)  |  ![Google Sign-In Dark](images/GoogleSignUpDark.png)
 
-**XML Usage**
+
+**Usage**
 ---
+
+Add the following to your `app` module level `build.gradle` file:
+
+    dependencies {
+        // To include this library.
+        compile 'com.shobhitpuri.custombuttons:google-signin:1.0.0'
+    }
+
+In your XML Layout, have the following:
 
     <RelativeLayout
         ...

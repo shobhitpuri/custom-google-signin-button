@@ -19,7 +19,12 @@ android {
 }
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
+    // Using the library source code to run and test it.
     compile project(':CustomGoogleSignInButton')
+
+    // Uncomment this if you want to use the released sign-in library.
+    // compile 'com.shobhitpuri.custombuttons:google-signin:1.0.0'
+
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
