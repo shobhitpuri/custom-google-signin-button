@@ -56,7 +56,7 @@ On the Stackoverflow, there are obviously questions which have been asked for th
 From documentation, Google suggests creating a custom button as mentioned on [Customizing the Sign-In Button](https://developers.google.com/identity/sign-in/android/custom-button). Then it suggests using the branding guidelines as mentioned at [Sign-In Branding Guidelines](https://developers.google.com/identity/branding-guidelines#sign-in-button). It includes using custom icons and images int he button, setting text size to specifics, paddings and other do's and don'ts for the logo. 
 
 
-Doing as per Google's suggestion involves some custom work. This small 257 KB library does that for you. Please feel free to make pull requests to improve it. I wanted to create a re-usable solution when I came across this problem when implementing the Sign-In button and wanted to share with everyone.
+Doing as per Google's suggestion involves some custom work. This small 3.93 KB library does that for you. Please feel free to make pull requests to improve the library. I wanted to create a re-usable solution when I came across this problem while implementing the Sign-In button. Just wanted to share with everyone.
 
 
 **License**
