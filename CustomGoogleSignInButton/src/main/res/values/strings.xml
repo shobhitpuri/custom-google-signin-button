@@ -1,0 +1,4 @@
+<resources>
+    <string name="google_sign_in">Sign in with Google</string>
+    <string name="google_sign_up">Sign up with Google</string>
+</resources>
