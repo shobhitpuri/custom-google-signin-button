@@ -64,7 +64,7 @@ Doing as per Google's suggestion involves some custom work. This small 3.93 KB l
 
     MIT License
 
-    Copyright (c) [2017] [Shobhit Puri]
+    Copyright (c) [2018] [Shobhit Puri]
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
