@@ -1,6 +1,8 @@
 **Problem**
 ---
 
+[![Join the chat at https://gitter.im/custom-google-signIn-button/Lobby](https://badges.gitter.im/custom-google-signIn-button/Lobby.svg)](https://gitter.im/custom-google-signIn-button/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 You want to add a Google Sign-In button to your Android application. But you want to change the text on the Google Sign-In button or provide custom localization? You would think setting `android:text` on the `com.google.android.gms.common.SignInButton` in your layout file would do the trick. However it turns out that that attribute is not available for `SignInButton`. 
 
 **Solution**
