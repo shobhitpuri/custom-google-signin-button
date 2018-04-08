@@ -19,7 +19,7 @@ Light Theme (White)        |  Dark Theme (Blue)
 Add the following to your `app` module level `build.gradle` file:
 
     dependencies {
-        // To include this library.
+        // Please Note: With Gradle 3.0 and Android Studio 3.0 use `implementation` keyword instead of `compile`
         compile 'com.shobhitpuri.custombuttons:google-signin:1.0.0'
     }
 
