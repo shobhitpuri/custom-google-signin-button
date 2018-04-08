@@ -19,8 +19,8 @@ Light Theme (White)        |  Dark Theme (Blue)
 Add the following to your `app` module level `build.gradle` file:
 
     dependencies {
-        // Please Note: With Gradle 3.0 and Android Studio 3.0 use `implementation` keyword instead of `compile`
-        compile 'com.shobhitpuri.custombuttons:google-signin:1.0.0'
+        // Please Note: If you are using Android Studio older than 3.0 or Gradle plugin older than 3.0, then use the `compile` keyword instead of `implementation`.
+        implementation 'com.shobhitpuri.custombuttons:google-signin:1.0.0'
     }
 
 In your XML Layout, have the following:
