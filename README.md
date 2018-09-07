@@ -1,5 +1,6 @@
 **Problem**
 ---
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Custom%20Google%20SignInButton-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/7099)
 
 You want to add a Google Sign-In button to your Android application. But you want to change the text on the Google Sign-In button or provide custom localization? You would think setting `android:text` on the `com.google.android.gms.common.SignInButton` in your layout file would do the trick. However it turns out that that attribute is not available for `SignInButton`. 
 
