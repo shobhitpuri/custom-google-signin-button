@@ -9,5 +9,6 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="@string/google_sign_up"
+        app:centerTextInButton="false"
         app:isDarkTheme="true" />
 </RelativeLayout>
