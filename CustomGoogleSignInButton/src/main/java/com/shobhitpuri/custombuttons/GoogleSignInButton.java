@@ -30,7 +30,8 @@ import android.support.v7.widget.AppCompatButton;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 
-import static com.shobhitpuri.custombuttons.util.Constants.BUTTON_TEXT_SIZE;
+import com.shobhitpuri.custombuttons.util.Constants;
+import com.shobhitpuri.custombuttons.util.GenericUtils;
 
 /**
  * This is a customized Google Sign In button. Supports:
@@ -56,6 +57,12 @@ public class GoogleSignInButton extends AppCompatButton {
      * Flag to show the dark theme with Google's standard dark blue color.
      */
     private boolean mIsDarkTheme;
+
+    /**
+     * Flag that give the feeling of the text being in the middle of the button.
+     * P.S: Looks decent with light background but ugly with dark theme.
+     */
+    private boolean mCenterTextInButton;
 
     /**
      * Constructor
@@ -120,6 +127,8 @@ public class GoogleSignInButton extends AppCompatButton {
             mText = typedArray.getString(R.styleable.ButtonStyleable_android_text);
             // Get the attribute to check if user wants dark theme.
             mIsDarkTheme = typedArray.getBoolean(R.styleable.ButtonStyleable_isDarkTheme, false);
+            // Get the attribute to check if user wants to center in the text in the whole button.
+            mCenterTextInButton = typedArray.getBoolean(R.styleable.ButtonStyleable_centerTextInButton, false);
         } catch (Exception ex) {
             ex.printStackTrace();
         } finally {
@@ -141,13 +150,15 @@ public class GoogleSignInButton extends AppCompatButton {
         setButtonTextColor();
         // Set background of button
         setButtonBackground();
+        // Set text in middle if set.
+        setButtonTextPosition();
     }
 
     /**
      * Set the text size to standard as mentioned in guidelines.
      */
     private void setButtonTextSize() {
-        this.setTextSize(TypedValue.COMPLEX_UNIT_SP, BUTTON_TEXT_SIZE);
+        this.setTextSize(TypedValue.COMPLEX_UNIT_SP, Constants.BUTTON_TEXT_SIZE);
     }
 
     /**
@@ -166,6 +177,21 @@ public class GoogleSignInButton extends AppCompatButton {
     private void setButtonTextColor() {
         int textColor = mIsDarkTheme ? android.R.color.white : R.color.text_color_dark;
         this.setTextColor(ContextCompat.getColor(getContext(), textColor));
+    }
+
+    /**
+     * Give the feel of text being in the center of the whole button instead of just being in the
+     * center of the section to right of the Google icon.
+     */
+    private void setButtonTextPosition() {
+        if (mCenterTextInButton) {
+            // Add more padding to the right of same width as the Google button.
+            // This gives the illusion of the text being in the center.
+            // P.S: The logic could be improved
+            int paddingRight = getPaddingRight() +
+                    (int) GenericUtils.convertDpToPixel(Constants.GOOGLE_ICON_SIZE_DP, getContext());
+            setPadding(getPaddingLeft(), getPaddingTop(), paddingRight, getPaddingBottom());
+        }
     }
 
     /**

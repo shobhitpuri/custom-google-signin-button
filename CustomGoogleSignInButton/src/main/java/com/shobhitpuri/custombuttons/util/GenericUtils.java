@@ -21,17 +21,29 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-
 package com.shobhitpuri.custombuttons.util;
 
-/**
- * Constants file to keep constants needed for the button.
- * Created by shobhit on 2017-09-13.
- */
+import android.content.Context;
+import android.content.res.Resources;
+import android.util.TypedValue;
 
-public class Constants {
-    // Standard text size got SignInButton
-    public static final int BUTTON_TEXT_SIZE = 14;
-    // Width of just the Google icon on the button
-    public static final int GOOGLE_ICON_SIZE_DP = 40;
+/**
+ * Utility class.
+ */
+public class GenericUtils {
+    /**
+     * This method converts dp unit to equivalent pixels, depending on device density.
+     *
+     * @param dp      A value in dp (density independent pixels) unit. Which we need to convert into pixels
+     * @param context Context to get resources and device specific display metrics
+     * @return A float value to represent px equivalent to dp depending on device density
+     */
+    public static float convertDpToPixel(float dp, Context context) {
+        Resources resources = context.getResources();
+        return TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_DIP,
+                dp,
+                resources.getDisplayMetrics()
+        );
+    }
 }
