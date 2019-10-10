@@ -1,7 +1,7 @@
 package com.shobhitpuri.googlecustomsigninbutton;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * Sample activity to show the Custom Google Sign in button
