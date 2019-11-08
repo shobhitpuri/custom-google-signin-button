@@ -19,23 +19,27 @@ Light Theme (White)        |  Dark Theme (Blue)
 
 Add the following to your `app` module level `build.gradle` file:
 
-    dependencies {
-        implementation 'com.shobhitpuri.custombuttons:google-signin:1.1.0'
-    }
+```gradle
+dependencies {
+    implementation 'com.shobhitpuri.custombuttons:google-signin:1.1.0'
+}
+```
 
 In your XML Layout, have the following:
 
-    <RelativeLayout
-        ...
-        xmlns:app="http://schemas.android.com/apk/res-auto">
-        
-        <com.shobhitpuri.custombuttons.GoogleSignInButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/google_sign_up"
-            app:isDarkTheme="true" />
-    </RelativeLayout>
+```xml
+<RelativeLayout
+    ...
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.shobhitpuri.custombuttons.GoogleSignInButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/google_sign_up"
+        app:isDarkTheme="true" />
+</RelativeLayout>
+```
 
 
 **Options**
