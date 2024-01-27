@@ -1,4 +1,7 @@
-apply plugin: 'com.android.library'
+plugins {
+    id 'com.android.library'
+    id 'maven-publish'
+}
 
 android {
     compileSdk 34
@@ -22,4 +25,18 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.6.1'
+}
+
+afterEvaluate{
+    publishing{
+        publications{
+            release(MavenPublication){
+                from components.findByName('release')
+
+                groupId='com.github.shobhitpuri'
+                artifactId = 'custom-google-signin-button'
+                version = '2.0.0'
+            }
+        }
+    }
 }
