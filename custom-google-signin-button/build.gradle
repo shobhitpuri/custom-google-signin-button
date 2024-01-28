@@ -19,6 +19,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    publishing {
+        singleVariant('release') {
+            withSourcesJar()
+            withJavadocJar()
+        }
+        // ...
+    }
+
     namespace 'com.shobhitpuri.custombuttons'
 }
 
@@ -27,14 +36,15 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
 }
 
-afterEvaluate{
-    publishing{
-        publications{
-            release(MavenPublication){
-                from components.findByName('release')
-                groupId='com.github.shobhitpuri'
-                artifactId = 'custom-google-signin-button'
-                version = '2.0.1-SNAPSHOT'
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = 'com.github.shobhitpuri'
+            artifactId = 'custom-google-signin-button'
+            version = '2.0.1-SNAPSHOT'
+
+            afterEvaluate {
+                from components.release
             }
         }
     }
