@@ -34,7 +34,7 @@ afterEvaluate{
                 from components.findByName('release')
                 groupId='com.github.shobhitpuri'
                 artifactId = 'custom-google-signin-button'
-                version = '2.0.0-SNAPSHOT'
+                version = '2.0.1-SNAPSHOT'
             }
         }
     }
