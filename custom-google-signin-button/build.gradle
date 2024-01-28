@@ -32,9 +32,9 @@ afterEvaluate{
         publications{
             release(MavenPublication){
                 from components.findByName('release')
-                groupId='com.shobhitpuri.custombuttons'
-                artifactId = 'google-signin'
-                version = '2.0.0'
+                groupId='com.github.shobhitpuri'
+                artifactId = 'custom-google-signin-button'
+                version = '2.0.0-SNAPSHOT'
             }
         }
     }

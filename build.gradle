@@ -17,3 +17,12 @@ buildscript {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+// For Jitpack.io release https://github.com/jitpack/jitpack.io/
+allprojects {
+    repositories {
+        google()
+        maven { url "https://jitpack.io" }
+        mavenCentral()
+    }
+}

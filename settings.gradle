@@ -1,18 +1,1 @@
-include ':app', ':CustomGoogleSignInButton'
-
-// For Jitpack.io release https://github.com/jitpack/jitpack.io/
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        google()
-        mavenCentral()
-        maven {
-            url "https://jitpack.io"
-            content { includeGroup "com.github.shobhitpuri" }
-        }
-        maven {
-            url "https://otherrepository"
-            content { excludeGroupByRegex "com\\.github.shobhitpuri.*" }
-        }
-    }
-}
+include ':app', ':custom-google-signin-button'
