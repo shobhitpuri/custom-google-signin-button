@@ -41,7 +41,7 @@ publishing {
         release(MavenPublication) {
             groupId = 'com.github.shobhitpuri'
             artifactId = 'custom-google-signin-button'
-            version = '2.0.1-SNAPSHOT'
+            version = '2.0.2-SNAPSHOT'
 
             afterEvaluate {
                 from components.release
