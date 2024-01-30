@@ -1,6 +1,7 @@
 **Problem**
 ---
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Custom%20Google%20SignInButton-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/7099)
+[![](https://jitpack.io/v/shobhitpuri/custom-google-signin-button.svg)](https://jitpack.io/#shobhitpuri/custom-google-signin-button)
 
 You want to add a Google Sign-In button to your Android application. But you want to change the text on the Google Sign-In button or provide custom localization? You would think setting `android:text` on the `com.google.android.gms.common.SignInButton` in your layout file would do the trick. However it turns out that that attribute is not available for `SignInButton`. 
 
@@ -21,7 +22,18 @@ Add the following to your `app` module level `build.gradle` file:
 
 ```gradle
 dependencies {
-    implementation 'com.shobhitpuri.custombuttons:google-signin:1.1.0'
+    implementation 'com.github.shobhitpuri:custom-google-signin-button:2.0.0'
+}
+```
+
+Also, add the following in the top-level `build.gradle` file:
+```gradle
+allprojects {
+    repositories {
+        google()
+        maven { url "https://jitpack.io" }
+        mavenCentral()
+    }
 }
 ```
 
@@ -68,7 +80,7 @@ Doing as per Google's suggestion involves some custom work. This small 3.93 KB l
 
     MIT License
     
-    Copyright (c) 2019 Shobhit Puri
+    Copyright (c) 2024 Shobhit Puri
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
