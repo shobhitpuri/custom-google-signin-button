@@ -1,1 +1,1 @@
-include ':app', ':CustomGoogleSignInButton'
+include ':app', ':custom-google-signin-button'

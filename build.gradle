@@ -2,21 +2,23 @@
 
 buildscript {
     repositories {
-        jcenter()
         google()
+        mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.2'
+        classpath 'com.android.tools.build:gradle:8.0.0'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
 }
 
+// For Jitpack.io release https://github.com/jitpack/jitpack.io/
 allprojects {
     repositories {
-        jcenter()
         google()
+        maven { url "https://jitpack.io" }
+        mavenCentral()
     }
 }
 
