@@ -20,6 +20,7 @@ android {
         }
     }
 
+    // https://developer.android.com/build/publish-library
     publishing {
         singleVariant('release') {
             withSourcesJar()
@@ -36,12 +37,13 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
 }
 
+// https://developer.android.com/build/publish-library/configure-pub-variants
 publishing {
     publications {
         release(MavenPublication) {
             groupId = 'com.github.shobhitpuri'
             artifactId = 'custom-google-signin-button'
-            version = '2.0.2-SNAPSHOT'
+            version = '2.0.0'
 
             afterEvaluate {
                 from components.release
